@@ -13,12 +13,26 @@ import Page3 from './pages/3';
 import Page4 from './pages/4';
 import Page5 from './pages/5';
 
+
+const PAGES = [
+  <Page1 />,
+  <Page2 />,
+  <Page3 />,
+  <Page4 />,
+  <Page5 />,
+];
+
+
 class App extends React.Component {
   state = { page: 1 }
 
   setPage(page) {
     if (page < 1) {
       page = 1;
+    }
+    
+    if (page > PAGES.length) {
+      page = PAGES.length;
     }
 
     document.cookie = `a=${page};`;
@@ -37,19 +51,7 @@ class App extends React.Component {
   }
 
   render() {
-    let pages = [
-      <Page1 />,
-      <Page2 />,
-      <Page3 />,
-      <Page4 />,
-      <Page5 />,
-    ];
-
-    let page = pages[this.state.page-1];
-
-    if (!page) {
-      page = (<div>unfinished</div>);
-    }
+    let page = PAGES[this.state.page-1];
 
     return (
       <div style={{ margin: "5%" }}>
@@ -57,8 +59,8 @@ class App extends React.Component {
           {page}
         </div>
         <div style={{ width: "100%", textAlign: "right" }}>
-          <Button onClick={() => { this.setPage(this.state.page - 1) }}>Back</Button>
-          <Button onClick={() => { this.setPage(this.state.page + 1) }}>Next</Button>
+          {this.state.page > 1 ? <Button onClick={() => { this.setPage(this.state.page - 1) }}>Back</Button> : "" }
+          {this.state.page < PAGES.length ? <Button onClick={() => { this.setPage(this.state.page + 1) }}>Next</Button> : "" }
         </div>
       </div>
     )
