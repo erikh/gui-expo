@@ -12,6 +12,7 @@ import Page2 from './pages/2';
 import Page3 from './pages/3';
 import Page4 from './pages/4';
 import Page5 from './pages/5';
+import Page6 from './pages/6';
 
 
 const PAGES = [
@@ -20,6 +21,7 @@ const PAGES = [
   <Page3 />,
   <Page4 />,
   <Page5 />,
+  <Page6 />,
 ];
 
 
