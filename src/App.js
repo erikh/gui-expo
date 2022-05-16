@@ -13,7 +13,7 @@ import Page3 from './pages/3';
 import Page4 from './pages/4';
 import Page5 from './pages/5';
 import Page6 from './pages/6';
-
+import Page7 from './pages/7';
 
 const PAGES = [
   <Page1 />,
@@ -22,6 +22,7 @@ const PAGES = [
   <Page4 />,
   <Page5 />,
   <Page6 />,
+  <Page7 />,
 ];
 
 
