@@ -12,15 +12,11 @@ class Page4 extends React.Component {
         </Grid>
         <Grid item xs={12}>
           <Typography variant="body1">
-            What's a layout? A layout is a pattern that describes the
-            <i>structure</i> of the website, like a magazine layout, but with dynamic
-            properties.
+            What's a layout? A layout is a pattern that describes the <i>structure</i> of the website, like a magazine layout, but with dynamic properties.
           </Typography>
           <br />
           <Typography variant="body1">
-            There are several styles of layout, some are meant for whole pages,
-            some for just the parts of them, like the List in the last example.
-            We'll go over a few in the next page.
+            There are several styles of layout, some are meant for whole pages, some for just the parts of them, like the List in the last example. We'll go over a few in the next page.
           </Typography>
         </Grid>
       </Grid>

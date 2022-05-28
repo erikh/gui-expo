@@ -14,8 +14,17 @@ import Avatar from '@mui/material/Avatar';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import LinearProgress from '@mui/material/LinearProgress';
+import SpeedDial from "@mui/material/SpeedDial";
+import SpeedDialIcon from "@mui/material/SpeedDialIcon";
+import SpeedDialAction from "@mui/material/SpeedDialAction";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import CardContent from "@mui/material/CardContent";
+import CardActions from "@mui/material/CardActions";
+
 
 import PersonIcon from '@mui/icons-material/Person';
+import CopyAllIcon from '@mui/icons-material/CopyAll';
 
 const EMAILS = [
   "foo@example.com",
@@ -85,6 +94,43 @@ class Page7 extends React.Component {
             <br />
             <LinearProgress variant="determinate" value={80} /> 
           </Grid>
+        </Grid>
+        <Grid item xs={4}>
+          <Typography variant="h5">Speed Dials:</Typography>
+            <SpeedDial
+              ariaLabel="SpeedDial basic example"
+              icon={<SpeedDialIcon />}
+            >
+              <SpeedDialAction
+                key="copy"
+                icon={<CopyAllIcon />}
+                tooltipTitle="copy"
+              />
+            </SpeedDial>
+        </Grid>
+        <Grid item xs={4}>
+          <Typography variant="h5">Cards:</Typography>
+          <Card sx={{ maxWidth: 345 }}>
+            <CardMedia
+              component="img"
+              height="140"
+              image="/contemplative-reptile.jpg"
+              alt="green iguana"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Lizard
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Lizards are a widespread group of squamate reptiles, with over 6,000
+                species, ranging across all continents except Antarctica
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button size="small">Share</Button>
+              <Button size="small">Learn More</Button>
+            </CardActions>
+          </Card>
         </Grid>
       </React.Fragment>
     );
