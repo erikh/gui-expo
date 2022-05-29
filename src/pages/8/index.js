@@ -8,6 +8,7 @@ const STATEMENTS = [
   "I hope you enjoyed this tour!",
   "I have many things I want to show you about computers",
   "You just have to open your mind to them, and put the time in",
+  "Happy Birthday!",
   "I love you."
 ]
 
