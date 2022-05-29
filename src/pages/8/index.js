@@ -42,7 +42,7 @@ class Page8 extends React.Component {
         </Grid>
         <Grid item xs={12}>
           {STATEMENTS.map((s, i) => (
-            <Fade key={s} in={this.state.rotate === i}><Typography variant="h6">{s}</Typography></Fade>
+            <Fade key={s} in={this.state.rotate === i}><Typography variant="h6">{s}{i < STATEMENTS.length - 1 ? " ... " : "" }</Typography></Fade>
           ))}
         </Grid>
       </Grid>
