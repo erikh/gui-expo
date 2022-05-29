@@ -13,20 +13,25 @@ const STATEMENTS = [
 
 class Page8 extends React.Component {
   state = { rotate: 0 }
+  interval = null;
 
-  rotate() {
+  rotate = () => {
     let res = this.state.rotate;
-    if (res > STATEMENTS.length) {
-      res = -1;
+    if (res >= STATEMENTS.length) {
+      res = 0
+    } else {
+      res++
     }
-
-    res++;
 
     this.setState({ rotate: res })
   }
 
   componentDidMount() {
-    setInterval(() => { this.rotate() },  5000);
+    this.interval = setInterval(() => this.rotate(),  5000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval)
   }
 
   render() {
